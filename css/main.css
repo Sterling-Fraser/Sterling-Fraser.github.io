@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans+Narrow');
+
+/*universal*/
+*, *:before, *:after {
+	margin:0;
+	padding:0;
+	-moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.left {float:left;}
+.right {float:right;}
+.clearfix:after {
+    display:table;
+    content:" ";
+    clear:both;
+}
+
+.hide {
+    position:absolute !important;
+    left:-9999em !important;
+    top:-9999em !important;
+}
+
+.container{
+    width:65%;
+    max-width: 960px;
+    margin:0 auto;
+}
+
+html {
+	font-size: 1.4rem;
+    background-color: #BDD6D3;
+    /*background-image: url(https://images.unsplash.com/photo-1475965894430-b05c9d13568a?dpr=1&auto=format&fit=crop&w=767&h=1023&q=80&cs=tinysrgb&crop=);*/
+    background-size: cover;
+    color:white;
+}
+
+html, body {
+	height: 100%;
+	width:100%;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h1,h2,h3,h4,h5,dt {
+    font-weight: 300;
+    font-variant: small-caps;
+    font-family: 'Abril Fatface', cursive;
+}
+h1 {font-size:4em;}
+h2 {
+    font-size: 10em;
+    line-height: .95em;
+    padding:.15em 0 0 .2em;
+}
+h3::after {
+    content: '';
+    display: block;
+    background: white;
+    height: 2px;
+    max-width: 400px;
+    width: 100%;
+    margin:4px 0 10px 0;
+}
+h3 {font-size: 3em;}
+h4 {font-size: 2.5em;}
+h5 {font-size: 2em;}
+
+a,p,ul,li {
+ color:#34869E;
+}
+
+a, a:visited {
+    text-decoration: none !important;
+    /*color:#333;*/
+}
+
+a:hover, a:active {
+    /*color:black;*/
+}
+
+/*specific*/
+
+/*header*/
+
+
+/*nav*/
+nav {
+    width:100%;
+    position:fixed;
+    bottom:0;
+    z-index: 10;
+    background-color: #f2ca00;
+    color:black;
+    box-shadow:0px 0 10px rgba(10,10,10,.3);
+    font-size: 1.8em;
+    padding:10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    width:100%;
+    position:relative;
+}
+
+nav ul li {
+    display:inline-block;
+    padding:0 10px;
+    width:100px;
+    position:relative;
+}
+
+nav ul li a {
+    position: absolute;
+    bottom:-8px;
+    /*transition:bottom .4s;
+    transition:text-shadow .4s;*/
+    animation: hoverOut .1s linear 0s 1 forwards;
+}
+
+nav ul li:hover a {
+    animation: hoverIn .1s linear 0s 1 forwards;
+    /*transition:bottom .4s;
+    transition:text-shadow .4s;*/
+    
+}
+
+@keyframes hoverIn {
+    from {bottom:-8px;text-shadow: 0 0 0 rgba(0,0,0,0);}
+    to {bottom:-4px;text-shadow: 0px 5px 5px rgba(100,100,100,.3);}
+}
+@keyframes hoverOut {
+    0% {bottom:-4px;text-shadow: 0px 5px 5px rgba(100,100,100,.3);}
+    100% {bottom:-8px;text-shadow: 0 0 0 rgba(0,0,0,0);}
+}
+
+#home-font {
+    color:white;
+    font-family: 'Abril Fatface', cursive;
+    width:300px;
+    bottom:-12px;
+}
+
+#nav-right {
+    font-size: .65em;
+    margin-top:12px;
+}
+
+.landing {
+    height:100vh;
+}
+
+.change-up {
+    margin:0;padding:0;
+    position:absolute;
+    top:0;
+    right:0;
+    list-style-type: none;
+}
+.change-up li {
+    margin:0;padding:0;
+    margin-left:-5px;
+    display: inline-block;
+    padding:10px 50px;
+    }
+.change-up li a {display:inline-block;}
+
+.noSelect{
+    -webkit-box-shadow: inset 10px -11px 25px -2px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 10px -11px 25px -2px rgba(0,0,0,0.25);
+    box-shadow: inset 10px -11px 25px -2px rgba(0,0,0,0.25);
+    border-radius: 0 0 0 10px;
+    animation:out .5s linear 0s 1 forwards;
+
+}
+.noSelect:hover {
+    box-shadow: 0px -10px 25px rgba(0,0,0,.25);
+    transition:box-shadow 1s;
+    animation: in .5s linear 0s 1 forwards;
+
+}
+@keyframes in {
+    0%{box-shadow: inset 10px -11px 25px -2px rgba(0,0,0,0.25);}
+    50%{box-shadow: inset 10px -11px 25px -2px rgba(0,0,0,0);}
+    51% {box-shadow: 0px -15px 25px rgba(0,0,0,0);}
+    100%{
+        box-shadow: 0px -15px 25px rgba(0,0,0,.25);
+        border-radius: 10px 0 0 0;
+    }
+}
+@keyframes out {
+    0%{
+        box-shadow: 0px -15px 25px rgba(0,0,0,.25);
+        border-radius: 10px 0 0 0;
+    }
+    50% {box-shadow: 0px -15px 25px rgba(0,0,0,0);}    
+    51%{box-shadow: inset 10px -11px 25px -2px rgba(0,0,0,0);}
+    100%{box-shadow: inset 10px -11px 25px -2px rgba(0,0,0,0.25);}
+
+}
+
+.white-dash {
+    width:50%;
+    max-width: 500px;
+    margin:0 auto;
+    border-bottom: solid 2px white;
+}
+
+/*about*/
+#about {
+    
+}
+
+/*resume*/
+
+#resume-container h3{
+    margin-top:1em;
+}
+
+.job-block {
+    width:100%;
+    margin-top:1.1em;
+    font-size: 1.14em;
+}
+.job-block dt {
+    font-size: 1.2em;
+}
+.job-heading {
+    width:100%;
+    margin-bottom: .2em;
+}
+.job-description {
+    width:100%;
+    padding: 10px 0px 10px 20px;
+}
+.job-description li {
+    margin-bottom: .3em;
+}
+
+.rightText {
+    text-align: right;
+}
+
+/*tech skills*/
+
+#techSkills ul {
+    margin-left: 1em;
+}
+
+/*footer*/
+
+footer{
+    width:100%;
+    background-color:white;
+    padding:1em 0 4em 1em;
+    margin-top: 1.5em
+}
+footer ul {
+    list-style-type: none;
+}
